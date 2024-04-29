@@ -1,3 +1,10 @@
+
+This project is going to be a refactor of my [Blog Capstone Project](https://github.com/SentientCyborg/Day_69-Advanced-Blog-Capstone-Project) as a PHP project using the Laravel framework.
+<br />
+<br />
+
+---
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
