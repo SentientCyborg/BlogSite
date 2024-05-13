@@ -81,7 +81,7 @@
                         </a>
                     </li>
                 </ul>
-                <div class="small text-center text-muted fst-italic">Copyright &copy; Your Website 2023</div>
+                <div class="small text-center text-muted fst-italic">Copyright &copy; Your Website <?php echo date("Y"); ?> </div>
             </div>
         </div>
     </div>
