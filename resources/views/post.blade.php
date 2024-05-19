@@ -1,4 +1,8 @@
-<x-layout>
+<x-layout bgImg="post-bg.jpg">
+
+    <x-slot:heading>Sample Post</x-slot:heading>
+    <x-slot:subHeading>Here is a sample post.</x-slot:subHeading>
+    <!-- TODO: Update above to be a blog entry. Do I actually want it like that?-->
 
     <article class="mb-4">
         <div class="container px-4 px-lg-5">

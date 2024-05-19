@@ -1,4 +1,8 @@
-<x-layout>
+<x-layout bgImg="about-bg.jpg">
+
+    <x-slot:heading>About Me</x-slot:heading>
+    <x-slot:subHeading>This is what I do.</x-slot:subHeading>
+
     <!--About-->
     <main class="mb-4">
         <div class="container px-4 px-lg-5">

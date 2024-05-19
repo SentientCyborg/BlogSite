@@ -1,4 +1,7 @@
-<x-layout>
+<x-layout bgImg="home-bg.jpg">
+
+    <x-slot:heading>Clean Blog</x-slot:heading>
+    <x-slot:subHeading>A blog theme by Start Bootstrap.</x-slot:subHeading>
 
     <!-- Index-->
     <div class="container px-4 px-lg-5">

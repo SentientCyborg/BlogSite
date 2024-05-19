@@ -1,4 +1,7 @@
-<x-layout>
+<x-layout bgImg="contact-bg.jpg">
+    
+    <x-slot:heading>Contact Me</x-slot:heading>
+    <x-slot:subHeading>Have questions? I have answers.</x-slot:subHeading>
 
     <!-- Contact-->
     <main class="mb-4">
