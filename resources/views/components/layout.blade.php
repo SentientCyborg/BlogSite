@@ -13,7 +13,7 @@
         <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href={{ asset('/css/styles.css') }} rel="stylesheet" />
     </head>
     <body>
         <!-- Navigation-->
@@ -26,10 +26,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><x-nav-link href="{{ URL::to('/') }}">Home</x-nav-link></li>
-                        <li class="nav-item"><x-nav-link href="{{ URL::to('/about')}}">About</x-nav-link></li>
-                        <li class="nav-item"><x-nav-link href="{{ URL::to('/post') }}">Sample Post</x-nav-link></li>
-                        <li class="nav-item"><x-nav-link href="{{ URL::to('/contact')}}">Contact</x-nav-link></li>
+                        <li class="nav-item"><x-nav-link href="/">Home</x-nav-link></li>
+                        <li class="nav-item"><x-nav-link href="/about">About</x-nav-link></li>
+                        <li class="nav-item"><x-nav-link href="/contact">Contact</x-nav-link></li>
                     </ul>
                 </div>
             </div>
