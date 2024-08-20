@@ -61,11 +61,11 @@ class PostController extends Controller
     }
 
     public function showPosts(): View {
-        return view('index', ['posts' => $this->posts['testPosts']]);
+        return view('posts.index', ['posts' => $this->posts['testPosts']]);
     }
 
     public function showOnePost($id): View {
         $post = Arr::first($this->posts['testPosts'], fn($post) => $post['id'] == $id);
-        return view('post', ['post' => $post]);
+        return view('posts.show', ['post' => $post]);
     }
 }
