@@ -68,4 +68,6 @@ class PostController extends Controller
         $post = Arr::first($this->posts['testPosts'], fn($post) => $post['id'] == $id);
         return view('posts.show', ['post' => $post]);
     }
+
+    //TODO: Add create post function
 }
