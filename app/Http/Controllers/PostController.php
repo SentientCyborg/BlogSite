@@ -8,13 +8,13 @@ use App\Models\Post;
 class PostController extends Controller
 {   
 
-    public function showPosts(): View {
-        return view('index', ['posts' => Post::all()]);
-    }
+    // public function showPosts(): View {
+    //     return view('index', ['posts' => Post::all()]);
+    // }
 
-    public function showOnePost($id): View {
-        $post = Post::find($id);
-        return view('post', ['post' => $post]);
-    }
+    // public function showOnePost($id): View {
+    //     $post = Post::find($id);
+    //     return view('post', ['post' => $post]);
+    // }
     
 }
