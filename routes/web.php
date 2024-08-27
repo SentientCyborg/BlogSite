@@ -6,7 +6,8 @@ use Illuminate\Support\Facades\Route;
 //TODO: Create dedicated post routing instead of using the home route
 Route::get('/', [PostController::class, 'showPosts']);
 Route::get('/post/{id}', [PostController::class, 'showOnePost']);
-//TODO: Add route to create post
+Route::get('/create', PostController::class, 'createPost');
+
 
 Route::get('/about', function () {
     return view('about');
@@ -15,6 +16,7 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
 
 
 

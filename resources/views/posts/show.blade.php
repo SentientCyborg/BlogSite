@@ -13,9 +13,9 @@
                     <p>{{ $post['text'] }}</p>
 
                     <!--TODO: Fix formatting for <p>'s below -->
-                    <p>Written by: {{ $post['author']}}</p>
-                    <p>Date: {{ $post['date_published'] }}</p>
-                    <p>Images by: <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a></p>
+                    <p>Written by {{ $post['author']}}</p>
+                    <p>Published on {{ $post['created_at']->format("m/d/y") }}</p>
+                    <p>Images by <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a></p>
                 </div>
             </div>
         </div>
