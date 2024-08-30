@@ -27,6 +27,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
                         <li class="nav-item"><x-nav-link href="/">Home</x-nav-link></li>
+                        <li class="nav-item"><x-nav-link href="/posts">View Posts</x-nav-link></li>
                         <li class="nav-item"><x-nav-link href="/about">About</x-nav-link></li>
                         <li class="nav-item"><x-nav-link href="/contact">Contact</x-nav-link></li>
                     </ul>
