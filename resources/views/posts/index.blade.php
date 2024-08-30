@@ -9,7 +9,7 @@
             <div class="col-md-10 col-lg-8 col-xl-7">
 
                 {{-- TODO: Put this link someplace else --}}
-                <a class="btn btn-primary" href="/post/create" role="button">Create Post</a>
+                <a class="btn btn-primary" href="{{url('/post/create')}}" role="button">Create Post</a>
                 
                 @foreach ($posts as $post)
                     
