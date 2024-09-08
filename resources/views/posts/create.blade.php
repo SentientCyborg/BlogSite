@@ -6,13 +6,27 @@
     <!-- Index-->
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-md-10 col-lg-8 col-xl-7">
+            <div class="col-md-10 col-lg-8 col-xl-7 mb-3">
                 
                 <h1>TODO: Update this page.</h1>
+                <form method="POST" action="">
+                    @csrf
+                    <div class="mb-3">
+                        <label for="FormControlInput1" class="form-label">Post Title</label>
+                        <input type="text" class="form-control" id="FormControlInput1" placeholder="Enter a title">
+                      </div>
+                      <div class="mb-3">
+                        <label for="FormControlInput2" class="form-label">Subtitle</label>
+                        <input type="text" class="form-control" id="FormControlInput2" placeholder="Enter a short post description.">
+                      </div> 
+                      <div class="mb-3">
+                        <label for="FormControlTextarea1" class="form-label">Blog Entry</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                      </div>
+                                      
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
 
-
-                <!-- Pager-->
-                <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
             </div>
         </div>
     </div>
