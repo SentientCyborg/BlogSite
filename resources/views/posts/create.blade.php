@@ -9,7 +9,7 @@
             <div class="col-md-10 col-lg-8 col-xl-7 mb-3">
                 
                 <h1>TODO: Update this page.</h1>
-                <form method="POST" action="">
+                <form method="POST" action="{{ url('/posts') }}">
                     @csrf
                     <div class="mb-3">
                         <label for="FormControlInput1" class="form-label">Post Title</label>
@@ -24,7 +24,9 @@
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
                       </div>
                                       
-                      <button type="submit" class="btn btn-primary">Submit</button>
+                      {{-- <button type="submit" class="btn btn-primary">Test Submit</button> --}}
+                      <x-button>Submit</x-button>
+                    </div>
                 </form>
 
             </div>
