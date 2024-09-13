@@ -24,14 +24,19 @@ class PostController extends Controller
         return View('posts.create');
     }
 
-    // public function store() : RedirectResponse {
-    //     ~ Code goes here. ~
-    //     return redirect('/posts');
-    // }
+    public function store() : RedirectResponse {
+        request()->validate([
+            'title' => ['required'],
+            'subtitle' => ['required'],
+            'text' => ['required']
+        ]);
+
+
+        return redirect('/posts');
+    }
     
     //Test function
-    public function store() {
-        // dd('Spam and Eggs');
-        dd(request()->all()); //TODO: This is not working. The request is only getting the CSRF token.
-    }
+    // public function store() {
+    //     dd(request()->all()); 
+    // }
 }
