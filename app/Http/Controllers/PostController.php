@@ -31,6 +31,12 @@ class PostController extends Controller
             'text' => ['required']
         ]);
 
+        Post::create([
+            'title' => request('title'),
+            'subtitle' => request('subtitle'),
+            'text' => request('text'),
+            'user_id' => 1
+        ]);
 
         return redirect('/posts');
     }
