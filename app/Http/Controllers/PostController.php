@@ -35,7 +35,7 @@ class PostController extends Controller
             'title' => request('title'),
             'subtitle' => request('subtitle'),
             'text' => request('text'),
-            'user_id' => 1
+            'user_id' => 1 //TODO: Update logic to use actual user id
         ]);
 
         return redirect('/posts');
