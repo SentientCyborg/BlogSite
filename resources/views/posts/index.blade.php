@@ -22,7 +22,6 @@
                         <p class="post-meta">
                             Posted by {{ $post['author']}}
                             on {{ date_format(date_create($post['created_at']), 'd M Y' ) }}
-                            {{-- on {{ $post['created_at']}} --}}
                         </p>
                     </div>
                     <!-- Divider-->
