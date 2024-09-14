@@ -12,7 +12,8 @@ class PostController extends Controller
 {   
 
     public function showPosts(): View {
-        return view('posts.index', ['posts' => Post::all()]);
+        $posts = Post::with('user')->latest()->get();
+        return view('posts.index', ['posts' => $posts]);
     }
 
     public function showOnePost($id): View {
