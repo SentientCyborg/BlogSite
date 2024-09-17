@@ -52,6 +52,25 @@ class PostController extends Controller
         return view('posts.edit', ['post' => $post]);
     }
 
+    //Update a post
+    public function updatePost($id) : RedirectResponse {
+        // TODO: Authorize user
+        request()->validate([
+            'title' => ['required'],
+            'subtitle' => ['required'],
+            'text' => ['required']
+        ]);
+
+        $post = Post::findOrFail($id);
+        $post->update([
+            'title' => request('title'),
+            'subtitle' => request('subtitle'),
+            'text' => request('text'),
+        ]);
+
+        return redirect('/posts' . $post->id);
+    }
+
     // Delete a post
     public function deletePost($id) : RedirectResponse {
         // TODO: Add authentication
