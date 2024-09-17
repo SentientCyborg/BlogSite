@@ -12,7 +12,7 @@ Route::get('/posts', [PostController::class, 'showPosts']);
 Route::post('/posts', [PostController::class, 'store']);
 Route::get('/post/create', [PostController::class, 'newPost']);
 Route::patch('/post/{id}', [PostController::class, 'updatePost']);
-Route::delete('post/{id}', [PostController::class, 'deletePost']);
+Route::delete('/post/{id}', [PostController::class, 'deletePost']);
 Route::get('/post/{id}/edit', [PostController::class, 'editPost']);
 
 Route::get('/about', function () {
