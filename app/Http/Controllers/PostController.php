@@ -60,7 +60,7 @@ class PostController extends Controller
             'subtitle' => ['required'],
             'text' => ['required']
         ]);
-
+        
         $post = Post::findOrFail($id);
         $post->update([
             'title' => request('title'),
