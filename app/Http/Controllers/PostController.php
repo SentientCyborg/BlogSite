@@ -54,6 +54,7 @@ class PostController extends Controller
 
     // Delete a post
     public function deletePost($id) : RedirectResponse {
+        // TODO: Add authentication
         Post::findOrFail($id)->delete();
         return redirect('/posts');
     }
