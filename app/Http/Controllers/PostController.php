@@ -11,20 +11,24 @@ use Illuminate\Http\RedirectResponse;
 class PostController extends Controller
 {   
 
+    // Show all posts
     public function showPosts(): View {
         $posts = Post::with('user')->latest()->get();
         return view('posts.index', ['posts' => $posts]);
     }
 
+    // Show a single post
     public function showOnePost($id): View {
         $post = Post::find($id);
         return view('posts.show', ['post' => $post]);
     }
 
+    // Create a new post
     public function newPost(): View {
         return View('posts.create');
     }
 
+    // Save a new post to the database
     public function store() : RedirectResponse {
         request()->validate([
             'title' => ['required'],
@@ -41,9 +45,7 @@ class PostController extends Controller
 
         return redirect('/posts');
     }
+
     
-    //Test function
-    // public function store() {
-    //     dd(request()->all()); 
-    // }
+
 }
