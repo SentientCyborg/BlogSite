@@ -52,4 +52,9 @@ class PostController extends Controller
         return view('posts.edit', ['post' => $post]);
     }
 
+    // Delete a post
+    public function deletePost($id) : RedirectResponse {
+        Post::findOrFail($id)->delete();
+        return redirect('/posts');
+    }
 }
