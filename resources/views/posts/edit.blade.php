@@ -13,7 +13,7 @@
                 {{-- Update post form --}}
                 <form method="POST" action="{{ url('/post/{ $post->id}') }}">
                     @csrf
-                    @method("Patch")
+                    @method("PATCH")
 
                     <div class="mb-3">
                       <label for="title" class="form-label">Post Title</label>
@@ -71,7 +71,7 @@
                             <x-button>Update</x-button>
                         </div>
                         <div class="col">
-                            <x-button>Delete</x-button>
+                            <x-button form="delete-post">Delete</x-button>
                         </div>
                     </div>
                 </div>
