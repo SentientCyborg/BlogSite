@@ -16,6 +16,7 @@
                     <p>Written by {{ $post['author']}}</p>
                     <p>Published on {{ $post['created_at']->format("m/d/y") }}</p>
                     <p>Images by <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a></p>
+                    <a href="/post/{{ $post->id }}/edit" class="btn btn-primary float-end">Edit Post</a>
                 </div>
             </div>
         </div>
