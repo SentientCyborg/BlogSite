@@ -35,11 +35,23 @@
                       @error("text")
                         <x-error> {{$message}} </x-error>
                       @enderror
-                    </div>  
-                      <x-button>Update</x-button>
-                      <a href="{{ url('/posts')}}" class="btn">Cancel</a> 
                     </div>
                 </form>
+
+                {{-- TODO: Fix formatting for these buttons --}}
+                <div class="container-fluid text-center">
+                    <div class="row justify-content-between">
+                        <div class="col">
+                            <a href="{{ url('/posts')}}" class="btn">Cancel</a>
+                        </div>
+                        <div class="col">
+                            <x-button>Update</x-button>
+                        </div>
+                        <div class="col">
+                            <x-button>Delete</x-button>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
