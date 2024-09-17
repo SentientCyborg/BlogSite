@@ -53,6 +53,10 @@
                     </div>
                 </div>
 
+                <form method="POST" action="/post/{{ $post->id }}" id="delete-post" class="invisible">
+                    @csrf
+                    @method("DELETE")
+                </form>
             </div>
         </div>
     </div>
