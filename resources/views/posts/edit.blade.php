@@ -9,6 +9,8 @@
             <div class="col-md-10 col-lg-8 col-xl-7 mb-3">
                 
                 <h1>TODO: Update this page.</h1>
+
+                {{-- Update post form --}}
                 <form method="POST" action="{{ url('/post/{ $post->id}') }}">
                     @csrf
                     @method("Patch")
@@ -53,10 +55,12 @@
                     </div>
                 </div>
 
+                {{-- Hidden form for delete action --}}
                 <form method="POST" action="/post/{{ $post->id }}" id="delete-post" class="invisible">
                     @csrf
                     @method("DELETE")
                 </form>
+
             </div>
         </div>
     </div>
