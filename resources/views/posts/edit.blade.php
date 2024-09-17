@@ -11,7 +11,7 @@
                 <h1>TODO: Update this page.</h1>
 
                 {{-- Update post form --}}
-                <form method="POST" action="{{ url('/post/{ $post->id}') }}">
+                <form method="POST" action="/post/{{ $post->id }}" id="update-post">
                     @csrf
                     @method("PATCH")
 
@@ -68,7 +68,7 @@
                             <a href="{{ url('/posts')}}" class="btn">Cancel</a>
                         </div>
                         <div class="col">
-                            <x-button>Update</x-button>
+                            <x-button form="update-post">Update</x-button>
                         </div>
                         <div class="col">
                             <x-button form="delete-post">Delete</x-button>

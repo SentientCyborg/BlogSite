@@ -60,7 +60,7 @@ class PostController extends Controller
             'subtitle' => ['required'],
             'text' => ['required']
         ]);
-        
+
         $post = Post::findOrFail($id);
         $post->update([
             'title' => request('title'),
@@ -68,7 +68,7 @@ class PostController extends Controller
             'text' => request('text'),
         ]);
 
-        return redirect('/posts' . $post->id);
+        return redirect('/post/' . $post->id);
     }
 
     // Delete a post
