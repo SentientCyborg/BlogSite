@@ -9,13 +9,13 @@
             <div class="col-md-10 col-lg-8 col-xl-7">
 
                 {{-- TODO: Put this link someplace else --}}
-                <a class="btn btn-primary" href="{{url('/post/create')}}" role="button">Create Post</a>
+                <a class="btn btn-primary" href="{{url('/posts/create')}}" role="button">Create Post</a>
                 
                 @foreach ($posts as $post)         
                     
                     <!-- Post preview-->
                     <div class="post-preview">
-                        <a href="/post/{{ $post['id'] }}">
+                        <a href="/posts/{{ $post['id'] }}">
                             <h2 class="post-title">{{ $post['title'] }}</h2>
                             <h3 class="post-subtitle">{{ $post['subtitle']}}</h3>
                         </a>

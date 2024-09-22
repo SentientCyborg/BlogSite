@@ -68,7 +68,7 @@ class PostController extends Controller
             'text' => request('text'),
         ]);
 
-        return redirect('/post/' . $post->id);
+        return redirect('/posts/' . $post->id);
     }
 
     // Delete a post

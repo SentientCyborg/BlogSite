@@ -11,7 +11,7 @@
                 <h1>TODO: Update this page.</h1>
 
                 {{-- Update post form --}}
-                <form method="POST" action="/post/{{ $post->id }}" id="update-post">
+                <form method="POST" action="/posts/{{ $post->id }}" id="update-post">
                     @csrf
                     @method("PATCH")
 
@@ -77,7 +77,7 @@
                 </div>
 
                 {{-- Hidden form for delete action --}}
-                <form method="POST" action="/post/{{ $post->id }}" id="delete-post" class="invisible">
+                <form method="POST" action="/posts/{{ $post->id }}" id="delete-post" class="invisible">
                     @csrf
                     @method("DELETE")
                 </form>
