@@ -12,19 +12,13 @@ class PostController extends Controller
 {   
 
     // Show all posts
-    public function showPosts(): View {
+    public function index(): View {
         $posts = Post::with('user')->latest()->get();
         return view('posts.index', ['posts' => $posts]);
     }
 
-    // Show a single post
-    public function showOnePost($id): View {
-        $post = Post::find($id);
-        return view('posts.show', ['post' => $post]);
-    }
-
     // Create a new post
-    public function newPost(): View {
+    public function create(): View {
         return View('posts.create');
     }
 
@@ -46,14 +40,20 @@ class PostController extends Controller
         return redirect('/posts');
     }
 
+    // Show a single post
+    public function show($id): View {
+        $post = Post::find($id);
+        return view('posts.show', ['post' => $post]);
+    }
+
     // Edit a post
-    public function editPost($id) : View {
+    public function edit($id) : View {
         $post = Post::find($id);
         return view('posts.edit', ['post' => $post]);
     }
 
     //Update a post
-    public function updatePost($id) : RedirectResponse {
+    public function update($id) : RedirectResponse {
         // TODO: Authorize user
         request()->validate([
             'title' => ['required'],
@@ -72,7 +72,7 @@ class PostController extends Controller
     }
 
     // Delete a post
-    public function deletePost($id) : RedirectResponse {
+    public function destroy($id) : RedirectResponse {
         // TODO: Add authentication
         Post::findOrFail($id)->delete();
         return redirect('/posts');
