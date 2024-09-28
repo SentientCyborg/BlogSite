@@ -11,7 +11,7 @@ class RegisteredUserController extends Controller
         return view('auth.register');
     } 
 
-    public function store(): {
+    public function store(): never {
         // TODO: update logic
         dd(request()->all()); 
     }

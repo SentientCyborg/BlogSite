@@ -11,7 +11,7 @@ class SessionController extends Controller
         return view('auth.login');
     }
 
-    public function store () : {
+    public function store () : never {
         // TODO: update logic
         dd(request()->all());
     }
