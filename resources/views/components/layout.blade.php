@@ -30,6 +30,7 @@
                         <li class="nav-item"><x-nav-link href="/posts">View Posts</x-nav-link></li>
                         <li class="nav-item"><x-nav-link href="/about">About</x-nav-link></li>
                         <li class="nav-item"><x-nav-link href="/contact">Contact</x-nav-link></li>
+                        {{-- TODO: Hide these links for logged in users --}}
                         <li class="nav-item"><x-nav-link href="/login">Login</x-nav-link></li>
                         <li class="nav-item"><x-nav-link href="/register">Register</x-nav-link></li>
                     </ul>
