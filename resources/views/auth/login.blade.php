@@ -2,5 +2,8 @@
     
     <x-slot:heading>Login</x-slot:heading>
     <x-slot:subHeading>Please Login</x-slot:subHeading>
-    <p>Login Placeholder</p>
+    <div class="container">
+        <p>Login Placeholder</p>
+    </div>
+    
 </x-layout>
