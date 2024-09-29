@@ -27,7 +27,7 @@
                     <div class="mb-3">
                       <label for="text" class="form-label">Blog Entry</label>
                       <textarea name="text" class="form-control" id="exampleFormControlTextarea1" rows="5" required></textarea>
-                      <x-form-error name="text">
+                      <x-form-error name="text" />
                     </div>  
                                                     
                       <x-form-button>Submit</x-form-button>
