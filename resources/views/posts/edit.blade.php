@@ -25,9 +25,7 @@
                         placeholder="Enter a title"
                         value="{{ $post->title }}" 
                         required>
-                      @error("title")
-                        <x-error> {{$message}} </x-error>
-                      @enderror
+                      <x-form-error name="title" />
                     </div>
 
                     <div class="mb-3">
@@ -40,9 +38,7 @@
                         placeholder="Enter a short post description." 
                         value="{{ $post->subtitle }}"
                         required>
-                      @error("subtitle")
-                        <x-error> {{$message}} </x-error>
-                      @enderror
+                      <x-form-error name="subtitle" />
                     </div> 
 
                     <div class="mb-3">
@@ -55,9 +51,7 @@
                         required>
                             {{ $post->text }}
                       </textarea>
-                      @error("text")
-                        <x-error> {{$message}} </x-error>
-                      @enderror
+                    <x-form-error name="text" />
                     </div>
                 </form>
 
