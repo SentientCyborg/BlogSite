@@ -1,1 +1,0 @@
-<p class="alert alert-warning fs-6 ">{{  $slot  }}</p>
