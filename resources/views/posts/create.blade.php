@@ -12,24 +12,33 @@
                 <form method="POST" action="{{ url('/posts') }}">
                     @csrf
 
-                    <div class="mb-3">
-                      <label for="title" class="form-label">Post Title</label>
-                      <input type="text" name="title" class="form-control" id="FormControlInput1" placeholder="Enter a title" required>
+                    <x-form-field>
+                      <x-form-label for="title">Post Title</x-form-label>
+                      <x-form-input 
+                        type="text" 
+                        name="title" 
+                        placeholder="Enter a title" 
+                        required />
                       <x-form-error name="title" />
-                    </div>
+                    </x-form-field>
 
-                    <div class="mb-3">
-                      <label for="subtitle" class="form-label">Subtitle</label>
-                      <input type="text" name="subtitle" class="form-control" id="FormControlInput2" placeholder="Enter a short post description." required>
+                    <x-form-field>
+                      <x-form-label for="subtitle">Subtitle</x-form-label>
+                      <x-form-input 
+                        type="text" 
+                        name="subtitle"  
+                        placeholder="Enter a short post description." 
+                        required />
                       <x-form-error name="subtitle" />
-                    </div> 
+                    </x-form-field>
 
-                    <div class="mb-3">
-                      <label for="text" class="form-label">Blog Entry</label>
-                      <textarea name="text" class="form-control" id="exampleFormControlTextarea1" rows="5" required></textarea>
+                    <x-form-field>
+                      <x-form-label for="text">Blog Entry</x-form-label>
+                      <x-form-textarea name="text" required></x-form-textarea>
                       <x-form-error name="text" />
-                    </div>  
-                                                    
+                    </x-form-field>
+                    
+
                       <x-form-button>Submit</x-form-button>
                     </div>
                 </form>

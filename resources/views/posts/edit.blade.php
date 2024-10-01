@@ -15,44 +15,38 @@
                     @csrf
                     @method("PATCH")
 
-                    <div class="mb-3">
-                      <label for="title" class="form-label">Post Title</label>
-                      <input 
+
+                    <x-form-field>
+                      <x-form-label for="title">Post Title</x-form-label>
+                      <x-form-input 
                         type="text" 
                         name="title" 
-                        class="form-control" 
-                        id="FormControlInput1" 
-                        placeholder="Enter a title"
                         value="{{ $post->title }}" 
-                        required>
+                        required />
                       <x-form-error name="title" />
-                    </div>
+                    </x-form-field>
 
-                    <div class="mb-3">
-                      <label for="subtitle" class="form-label">Subtitle</label>
-                      <input 
+                    <x-form-field>
+                      <x-form-label for="subtitle">Subtitle</x-form-label>
+                      <x-form-input 
                         type="text" 
                         name="subtitle" 
-                        class="form-control" 
-                        id="FormControlInput2" 
-                        placeholder="Enter a short post description." 
                         value="{{ $post->subtitle }}"
-                        required>
+                        required />
                       <x-form-error name="subtitle" />
-                    </div> 
+                    </x-form-field>
 
-                    <div class="mb-3">
-                      <label for="text" class="form-label">Blog Entry</label>
-                      <textarea 
+                    <x-form-field>
+                      <x-form-label for="text">Blog Entry</x-form-label>
+                      <x-form-textarea 
                         name="text" 
-                        class="form-control" 
-                        id="exampleFormControlTextarea1" 
-                        rows="5" 
                         required>
-                            {{ $post->text }}
-                      </textarea>
-                    <x-form-error name="text" />
-                    </div>
+                        {{ $post->text }}
+                      </x-form-textarea>
+
+                      <x-form-error name="text" />
+                    </x-form-field>
+
                 </form>
 
                 {{-- TODO: Fix formatting for these buttons --}}
@@ -62,10 +56,10 @@
                             <a href="{{ url('/posts')}}" class="btn">Cancel</a>
                         </div>
                         <div class="col">
-                            <x-button form="update-post">Update</x-button>
+                            <x-form-button form="update-post">Update</x-button>
                         </div>
                         <div class="col">
-                            <x-button form="delete-post">Delete</x-button>
+                            <x-form-button form="delete-post">Delete</x-button>
                         </div>
                     </div>
                 </div>
