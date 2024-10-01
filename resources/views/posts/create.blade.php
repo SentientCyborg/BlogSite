@@ -34,7 +34,11 @@
 
                     <x-form-field>
                       <x-form-label for="text">Blog Entry</x-form-label>
-                      <x-form-textarea name="text" required></x-form-textarea>
+                      <x-form-textarea 
+                        name="text" 
+                        id="editor" 
+                        required>
+                      </x-form-textarea>
                       <x-form-error name="text" />
                     </x-form-field>
                     

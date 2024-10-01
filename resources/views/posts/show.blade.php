@@ -10,8 +10,7 @@
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
-                    <p>{{ $post['text'] }}</p>
-
+                    <p>{!! html_entity_decode($post['text']) !!}</p>
                     <!--TODO: Fix formatting for <p>'s below -->
                     <p>Written by {{ $post['author']}}</p>
                     <p>Published on {{ $post['created_at']->format("m/d/y") }}</p>

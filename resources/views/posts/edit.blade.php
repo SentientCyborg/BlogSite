@@ -39,9 +39,11 @@
                     <x-form-field>
                       <x-form-label for="text">Blog Entry</x-form-label>
                       <x-form-textarea 
-                        name="text" 
+                        name="text"
+                        id="editor" 
                         required>
                         {{ $post->text }}
+
                       </x-form-textarea>
 
                       <x-form-error name="text" />
