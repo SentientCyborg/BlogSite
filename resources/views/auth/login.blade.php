@@ -3,20 +3,35 @@
     <x-slot:heading>Login</x-slot:heading>
     <x-slot:subHeading>Please Login</x-slot:subHeading>
     <div class="container">
-        <p>Login Placeholder</p>
+        {{-- TODO: Make Pretty --}}
 
-    
-        <x-form-field>
-            <x-form-label for="text">Blog Entry</x-form-label>
-            <x-form-textarea 
-              name="text" 
-              {{-- placeholder={{ $post->text }} --}}
-              required>
-                {{-- {{ $post->text }} --}}
-            </x-form-textarea>
 
-            <x-form-error name="text" />
+        <x-form-container>
+          <p>Login Placeholder</p>
+          <x-form-field>
+            <x-form-label for="email">Email</x-form-label>
+            <x-form-input 
+              name="email" 
+              id="email" 
+              type="email" 
+              required/>
+            <x-form-error name="email" />
           </x-form-field>
+
+          <x-form-field>
+            <x-form-label for="password">Password</x-form-label>
+              <x-form-input 
+                name="password" 
+                id="password" 
+                type="password" 
+                required/>
+              <x-form-error name="password" />
+          </x-form-field>
+
+          <x-form-button>Submit</x-form-button>
+        
+        </x-form-container>
+
           
     </div>
     
