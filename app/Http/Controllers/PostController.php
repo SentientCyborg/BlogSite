@@ -24,6 +24,8 @@ class PostController extends Controller
 
     // Save a new post to the database
     public function store() : RedirectResponse {
+        //TODO: Sanitize inputs
+        
         request()->validate([
             'title' => ['required'],
             'subtitle' => ['required'],
