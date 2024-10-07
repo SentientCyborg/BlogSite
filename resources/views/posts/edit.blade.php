@@ -6,7 +6,8 @@
     <!-- Index-->
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-md-10 col-lg-8 col-xl-7 mb-3">
+            
+          <x-form-container>
                 
                 <h1>TODO: Update this page.</h1>
 
@@ -73,7 +74,7 @@
                 </form>
 
             </div>
-        </div>
+          </x-form-container>
     </div>
 
 </x-layout>
