@@ -17,12 +17,12 @@ class PostFactory extends Factory
      * @return array<string, mixed>
      */
     public function definition(): array
-    {
+    {   
         return [
             'title' => fake()->text(50),
             'subtitle' => fake()->sentences(2, true),
             'text' => fake()->paragraphs(2, true),
-            'user_id' => User::factory(),
+            'user_id' => User::factory(), 
         ];
     }
 }
