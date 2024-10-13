@@ -12,7 +12,7 @@
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <p>{!! html_entity_decode($post['text']) !!}</p>
                     <!--TODO: Fix formatting for <p>'s below -->
-                    <p>Written by {{ $post['author']}}</p>
+                    <p>Written by {{ $post->user->first_name}} {{ $post->user->last_name }}</p>
                     <p>Published on {{ $post['created_at']->format("m/d/y") }}</p>
                     <p>Images by <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a></p>
                     <a href="/posts/{{ $post->id }}/edit" class="btn btn-primary float-end">Edit Post</a>
@@ -21,4 +21,4 @@
         </div>
     </article>
     
-</x-layout>       
+</x-layout>

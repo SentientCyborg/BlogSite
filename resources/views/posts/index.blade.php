@@ -20,7 +20,7 @@
                             <h3 class="post-subtitle">{{ $post['subtitle']}}</h3>
                         </a>
                         <p class="post-meta">
-                            Posted by {{ $post['author']}}
+                            Posted by {{ $post->user->first_name}} {{ $post->user->last_name }}
                             on {{ date_format(date_create($post['created_at']), 'd M Y' ) }}
                         </p>
                     </div>
