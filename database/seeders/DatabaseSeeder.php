@@ -21,9 +21,5 @@ class DatabaseSeeder extends Seeder
             ->recycle($users)
             ->create();
         
-        // $this->call([
-        //     UserSeeder::class,
-        //     PostSeeder::class,
-        // ]);
     }
 }
