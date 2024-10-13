@@ -22,7 +22,7 @@ class PostFactory extends Factory
             'title' => fake()->text(50),
             'subtitle' => fake()->sentences(2, true),
             'text' => fake()->paragraphs(2, true),
-            'user_id' => User::factory()->has(Post::factory()) //TODO: Factory creating an extra post for some reason.
+            'user_id' => User::factory(),
         ];
     }
 }
