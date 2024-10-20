@@ -3,7 +3,9 @@
     <x-slot:heading>Register</x-slot:heading>
     <x-slot:subHeading>Please Register</x-slot:subHeading>
     <x-form-container>
-        <p>Register Placeholder</p>
+        <form method="POST" action="/register">
+          @csrf
+          <p>Please fill out the following:</p>
         <x-form-field>
             <x-form-label for="first_name">First Name</x-form-label>
             <x-form-input 
@@ -47,12 +49,14 @@
             <x-form-input 
                 name="password_confirmation" 
                 id="password_confirmation" 
-                type="password_confirmation" 
+                type="password" 
                 required/>
             <x-form-error name="password_confirmation" />
           </x-form-field>
 
-        <x-form-button>Submit</x-form-button>
+          <x-form-button>Register</x-form-button>
+        </form>
+       
       
       </x-form-container>
     
