@@ -16,12 +16,12 @@
           </x-form-field>
 
         <x-form-field>
-            <x-form-label for="last_namne">Last Name</x-form-label>
+            <x-form-label for="last_name">Last Name</x-form-label>
             <x-form-input 
-                name="last_namne" 
-                id="last_namne" 
+                name="last_name" 
+                id="last_name" 
                 required/>
-            <x-form-error name="last_namne" />
+            <x-form-error name="last_name" />
         </x-form-field>
 
         <x-form-field>
